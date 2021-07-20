@@ -1,0 +1,6 @@
+social-auth-core
+psycopg2-binary
+Pillow
+django
+social_auth_app_django
+requests

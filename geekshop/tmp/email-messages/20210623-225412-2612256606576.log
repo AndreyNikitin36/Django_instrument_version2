@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHVzZXIxMw==?=
+From: django@geekshop.local
+To: nasxw@mamama.loc
+Date: Wed, 23 Jun 2021 17:54:12 -0000
+Message-ID: <162447085232.8772.5909271676675855550@HOME-PC>
+
+Для подтверждения учетной записи user13 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/nasxw@mamama.loc/352b6c5a3613f077e78628d64313d34537e60948/
+-------------------------------------------------------------------------------
