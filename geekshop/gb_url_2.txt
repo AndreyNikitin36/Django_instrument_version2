@@ -1,9 +1,0 @@
-http://5.63.155.237/products/
-http://5.63.155.237/contact/
-http://5.63.155.237/basket/
-http://5.63.155.237/products/category/2/
-http://5.63.155.237/products/product/6/
-http://5.63.155.237/order/
-http://5.63.155.237/order/update/2/
-http://5.63.155.237/order/read/2/
-http://5.63.155.237/auth/edit/
