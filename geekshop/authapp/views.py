@@ -8,8 +8,10 @@ from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
 from authapp.models import ShopUser
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def login(request):
     title = 'вход'
 
