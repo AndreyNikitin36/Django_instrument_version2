@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHVzZXIxMg==?=
+From: django@geekshop.local
+To: narod@mail.loc
+Date: Wed, 23 Jun 2021 17:24:35 -0000
+Message-ID: <162446907507.4664.11451586083740280141@HOME-PC>
+
+Для подтверждения учетной записи user12 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/narod@mail.loc/44e0e81725c0ff05987c8fb3e682e69eb43dd2ef/
+-------------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+
+venv/
+
+.idea/
+
+geekshop/django_3.2.5/
+
+geekshop/db.sqlite3/
