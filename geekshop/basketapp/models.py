@@ -1,45 +1,49 @@
 from django.db import models
 from django.conf import settings
+from django.utils.functional import cached_property
 from mainapp.models import Product
 
 
 class BasketQuerySet(models.QuerySet):
 
-   def delete(self):
-       for item in self:
-           item.product.quantity += item.quantity
-           item.product.save()
-       super().delete()
+    def delete(self):
+        for item in self:
+            item.product.quantity += item.quantity
+            item.product.save()
+        super().delete()
 
 
 class Basket(models.Model):
     objects = BasketQuerySet.as_manager()
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='basket')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
     add_datetime = models.DateTimeField(verbose_name='время добавления', auto_now_add=True)
-    
-    
+
+    @cached_property
+    def get_items_cached(self):
+        return self.user.basket.select_related()
+
     def get_product_cost(self):
         """return cost of all products this type"""
         return self.product.price * self.quantity
-    
+
     product_cost = property(get_product_cost)
-    
-    
+
     def get_total_quantity(self):
         """return total quantity for user"""
-        _items = Basket.objects.filter(user=self.user)
+        # _items = Basket.objects.filter(user=self.user)
+        _items = self.get_items_cached
         _totalquantity = sum(list(map(lambda x: x.quantity, _items)))
         return _totalquantity
 
     total_quantity = property(get_total_quantity)
-    
-    
+
     def get_total_cost(self):
         """return total cost for user"""
-        _items = Basket.objects.filter(user=self.user)
+        # _items = Basket.objects.filter(user=self.user)
+        _items = self.get_items_cached
         _totalcost = sum(list(map(lambda x: x.product_cost, _items)))
         return _totalcost
 
@@ -62,8 +66,9 @@ class Basket(models.Model):
     #     return basket_items_dic
 
     @staticmethod
-    def get_item(pk):
-        return Basket.objects.get(pk=pk)
+    def get_item(user):
+        # return Basket.objects.get(pk=pk)
+        return user.basket.select_related().order_by('product_category')
 
     def delete(self, *args, **kwargs):
         self.product.quantity += self.quantity
@@ -78,4 +83,3 @@ class Basket(models.Model):
             self.product.quantity -= self.quantity
         self.product.save()
         super().save(*args, **kwargs)
-
