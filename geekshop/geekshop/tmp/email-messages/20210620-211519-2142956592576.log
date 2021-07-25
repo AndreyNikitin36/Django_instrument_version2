@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHF3ZXJ0?=
+From: django@geekshop.local
+To: nassa1983@mail.ru
+Date: Sun, 20 Jun 2021 16:15:19 -0000
+Message-ID: <162420571941.10148.5269726935395454396@HOME-PC>
+
+Для подтверждения учетной записи qwert на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/nassa1983@mail.ru/d89df961dd9661380f2dd1cc3a20477a3dbcce7e/
+-------------------------------------------------------------------------------

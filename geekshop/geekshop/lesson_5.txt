@@ -1,0 +1,117 @@
+    1  apt update
+    2  exit
+    3  cat /root/.ssh/id_rsa.pub
+    4  apt update
+    5  apt install nginx
+    6  apt install postgresql postgresql-contrib
+    7  apt install python3-venv
+    8  apt install git-core
+    9  apt install mc
+   10  mcedit /etc/postgresql/12/main/pg_hba.conf 
+   11  systemctl restart postgresql
+   12  useradd -g www-data -m django
+   13  cd /home/django/
+   14  git clone git@github.com:AndreyNikitin36/Django_instrument_version2.git
+   15  cd Django_instument_version2/geekshop/
+   16  ls
+   17  cd Django_instument_version2/
+   18  cd /Django_instument_version2/
+   19  cd /Django_instrument_version2/geekshop/
+   20  cd Django_instrument_version2/geekshop/
+   21  cd Django_instrument_version2/
+   22  ls
+   23  git clone git@github.com:AndreyNikitin36/Django_instrument_version2.git
+   24  cd..
+   25  cd../..
+   26  cd ../..
+   27  cd django
+   28  rm Django_instrument_version2/
+   29  rmdir Django_instrument_version2/
+   30  ls
+   31  rmdir Django_instrument_version2
+   32  cd  Django_instrument_version2
+   33  ls
+   34  cd  Django_instrument_version2
+   35  ls
+   36  cd ../..
+   37  ls
+   38  rm -R home
+   39  ls
+   40  useradd -g www-data -m django
+   41  cd /home/django/
+   42  sudo mkdir home
+   43  cd home
+   44  mkdir django
+   45  cd django
+   46  git clone git@github.com:AndreyNikitin36/Django_instrument_version2.git
+   47  ls
+   48  cd Django_instrument_version2/
+   49  ls
+   50  cd..
+   51  cd ..
+   52  rm -R Django_instrument_version2
+   53  ls
+   54  cd ../..
+   55  ssh-keygen
+   56  cat /etc/.ssh/id_rsa.pub
+   57  cat /root/.ssh/id_rsa.pub
+   58  cd /home/django
+   59  git clone git@github.com:AndreyNikitin36/Django_instrument_version2.git
+   60  cd Django_instrument_version2/
+   61  ls
+   62  cd geekshop/
+   63  ls
+   64  python3 -m venv env
+   65  source env/bin/activate
+   66  pip3 install -r requirements.txt
+   67  pip3 install gunicorn
+   68  psql -U postgres
+   69  python3 manage.py migrate
+   70  python3 manage.py fill_db
+   71  python3 manage.py runserver
+   72  chown -R django /home/django/
+   73  chmod -R 755 /home/django/geekshop/
+   74  mcedit /etc/systemd/sytem/gunicorn.service
+   75  deactivate
+   76  cd ../..
+   77  exit
+   78  ssh-copy-id root@5.63.155.237
+   79  ssh-keygen
+   80  cat /root/.ssh/id_rsa.pub
+   81  chmod -R 755 /home/django/Dgango_instrument_version2/geekshop/
+   82  chmod -R 755 /home/django/Django_instrument_version2/geekshop/
+   83  sudo nano /etc/systemd/system/gunicorn.service
+   84  cd /home/django
+   85  ls
+   86  cd Django_instrument_version2
+   87  ls
+   88  cd geekshop
+   89  ls
+   90  source env/bin/active
+   91  source env/bin/activate
+   92  python3 manage.py runserver
+   93  cd geekshop
+   94  ls
+   95  cd ..
+   96  sudo mcedit /etc/systemd/system/gunicorn.service
+   97  sudo systemctl enable gunicorn
+   98  chown -R django /home/django/
+   99  sudo systemctl enable gunicorn
+  100  sudo mcedit /etc/systemd/system/gunicorn.service
+  101  sudo systemctl enable gunicorn
+  102  sudo systemctl start gunicorn
+  103  sudo systemctl status gunicorn
+  104  sudo mcedit /etc/nginx/sites-available/geekshop
+  105  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+  106  sudo nginx -t
+  107  sudo mcedit /etc/nginx/sites-available/geekshop
+  108  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+  109  sudo nginx -t
+  110  sudo systemctl restart nginx
+  111  sudo mcedit /etc/nginx/sites-available/geekshop
+  112  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+  113  sudo nginx -t
+  114  sudo systemctl restart nginx
+  115  history
+  116  history > /temp/lesson_5.txt
+  117  history > lesson_5.txt
