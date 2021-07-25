@@ -7,3 +7,5 @@ venv/
 geekshop/django_3.2.5/
 
 geekshop/db.sqlite3/
+
+gb_url.txt
