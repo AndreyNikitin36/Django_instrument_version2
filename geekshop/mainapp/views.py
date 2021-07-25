@@ -4,6 +4,7 @@ from mainapp.models import ProductCategory, Product
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.conf import settings
 from django.core.cache import cache
+from django.views.decorators.cache import cache_page
 
 JSON_PATH = 'mainapp/json'
 
@@ -73,7 +74,8 @@ def get_products_in_category_ordered_by_price(pk):
         key = f'products_in_category_ordered_by_price_{pk}'
         products = cache.get(key)
         if products is None:
-            products = Product.objects.filter(category__pk=pk, is_active=True, category__is_active=True).order_by('price')
+            products = Product.objects.filter(category__pk=pk, is_active=True, category__is_active=True).order_by(
+                'price')
             cache.set(key, products)
         return products
     else:
@@ -110,6 +112,7 @@ def main(request):
     return render(request, 'mainapp/index.html', content)
 
 
+@cache_page(3600)
 def products(request, pk=None, page=1):
     title = 'продукты'
     # links_menu = ProductCategory.objects.filter(is_active=True)
@@ -160,6 +163,7 @@ def products(request, pk=None, page=1):
     return render(request, 'mainapp/products.html', content)
 
 
+@cache_page(3600)
 def product(request, pk):
     title = 'продукты'
     # links_menu = ProductCategory.objects.filter(is_active=True)
@@ -175,6 +179,7 @@ def product(request, pk):
     return render(request, 'mainapp/product.html', content)
 
 
+@cache_page(3600)
 def contact(request):
     title = 'о нас'
 
