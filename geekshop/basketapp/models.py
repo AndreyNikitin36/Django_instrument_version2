@@ -21,11 +21,9 @@ class Basket(models.Model):
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
     add_datetime = models.DateTimeField(verbose_name='время добавления', auto_now_add=True)
 
-
     @cached_property
     def get_items_cached(self):
         return self.user.basket.select_related()
-      
 
     def get_product_cost(self):
         """return cost of all products this type"""
