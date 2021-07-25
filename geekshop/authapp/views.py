@@ -18,7 +18,6 @@ def login(request):
     login_form = ShopUserLoginForm(data=request.POST or None)
     next = request.GET['next'] if 'next' in request.GET.keys() else ''
 
-
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
         password = request.POST['password']
@@ -94,16 +93,16 @@ def send_verify_mail(user):
 
 
 def verify(request, email, activation_key):
-        user = ShopUser.objects.filter(email=email).first()
-        if user and user.activation_key == activation_key and not user.is_activation_key_expired():
-            user.is_active = True
-            user.activation_key = ''
-            user.activation_key_created = None
-            user.save()
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return render(request, 'authapp/verification.html')
-        else:
-            return render(request, 'authapp/verification.html')
+    user = ShopUser.objects.filter(email=email).first()
+    if user and user.activation_key == activation_key and not user.is_activation_key_expired():
+        user.is_active = True
+        user.activation_key = ''
+        user.activation_key_created = None
+        user.save()
+        auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+        return render(request, 'authapp/verification.html')
+    else:
+        return render(request, 'authapp/verification.html')
 
 
 @transaction.atomic
