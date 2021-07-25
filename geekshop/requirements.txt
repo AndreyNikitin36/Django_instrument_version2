@@ -8,3 +8,4 @@ django-debug-toolbar
 django-debug-toolbar-template-profiler
 pydotplus
 django-extensions
+python-memcached
