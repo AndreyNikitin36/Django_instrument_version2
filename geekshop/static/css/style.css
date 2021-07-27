@@ -426,7 +426,7 @@ html, body {
 .basket_list .basket_record {
     position: relative;
     display: block;
-    height: 170px;
+    height: 270px;
     float: none;
 }
 
@@ -1658,8 +1658,8 @@ td:first-child {
 	float: left;
 	margin-right: 30px;
 	display: block;
-	height: 370px;
-	width: 370px;
+	height: 270px;
+	width: 270px;
 	position: relative;
 }
 .related-products .block:nth-child(3n) {

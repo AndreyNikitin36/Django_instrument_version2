@@ -1,0 +1,17 @@
+(env) root@5-63-155-237:/home/django/Django_instrument_version2/geekshop# siege -f /home/django/Django_instrument_version2/geekshop/gb_url.txt -d0 -r10 -c3
+** SIEGE 4.0.4
+** Preparing 3 concurrent users for battle.
+The server is now under siege...
+Transactions:                    315 hits
+Availability:                 100.00 %
+Elapsed time:                  17.54 secs
+Data transferred:               9.08 MB
+Response time:                  0.17 secs
+Transaction rate:              17.96 trans/sec
+Throughput:                     0.52 MB/sec
+Concurrency:                    2.99
+Successful transactions:         306
+Failed transactions:               0
+Longest transaction:            3.30
+Shortest transaction:           0.00
+

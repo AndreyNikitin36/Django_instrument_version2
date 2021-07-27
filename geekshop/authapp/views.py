@@ -13,6 +13,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def login(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('main'))
+
     title = 'вход'
 
     login_form = ShopUserLoginForm(data=request.POST or None)
