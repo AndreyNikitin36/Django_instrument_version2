@@ -21,6 +21,12 @@ class OrderList(ListView):
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'список заказов'
+
+        return context
+
 
 class OrderItemsCreate(CreateView):
     model = Order
@@ -109,6 +115,11 @@ class OrderItemsUpdate(UpdateView):
 class OrderDelete(DeleteView):
     model = Order
     success_url = reverse_lazy('order:list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'заказ/удаление'
+        return context
 
 
 class OrderRead(DetailView):

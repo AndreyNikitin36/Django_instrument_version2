@@ -1,8 +1,10 @@
-http://192.168.0.98/
-http://192.168.0.98/products/
-http://192.168.0.98/contact/
-http://192.168.0.98/products/category/1/
-http://192.168.0.98/products/category/2/
-http://192.168.0.98/products/category/3/
-http://192.168.0.98/products/category/4/
+http://5.63.155.237/
+http://5.63.155.237/products/
+http://5.63.155.237/contact/
+http://5.63.155.237/products/category/1/
+http://5.63.155.237/products/category/2/
+http://5.63.155.237/products/category/3/
+http://5.63.155.237/products/category/4/
+http://5.63.155.237/order/update/1/
+
 
